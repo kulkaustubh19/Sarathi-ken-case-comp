@@ -7,15 +7,23 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test:repository": "node scripts/check-repository.cjs",
+    "test:rails": "node scripts/check-rails.cjs",
+    "test:google": "node scripts/check-google-hybrid.cjs",
+    "test:hosted": "node scripts/check-hosted.cjs"
   },
   "dependencies": {
     "next": "15.5.27",
+    "nodemailer": "^10.0.13",
+    "pdf-lib": "^1.17.1",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.7",
     "@types/node": "^22.10.2",
+    "@types/nodemailer": "^8.0.2",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "eslint": "^9.17.0",

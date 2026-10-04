@@ -1,0 +1,23 @@
+// Synthetic observations for a recorded prototype; never a treatment recommendation.
+export const demoSamples = [
+  { type: "Medical Report", label: "Complete blood count", doctor: "Dr. Kavya Nair", city: "Bengaluru", date: "2026-09-29", note: "Age: 42\nSex: Female\nHemoglobin: 11.2 g/dL (reference 12–15)\nWBC: 6.8 x10^9/L (reference 4–11)\nPlatelets: 245 x10^9/L (reference 150–400)\nRecorded plan: discuss the hemoglobin trend at the next visit." },
+  { type: "Medical Report", label: "Lipid profile", doctor: "Dr. Arjun Kulkarni", city: "Mysuru", date: "2026-08-12", note: "Age: 42\nSex: Female\nTotal cholesterol: 218 mg/dL\nLDL: 138 mg/dL\nHDL: 48 mg/dL\nTriglycerides: 160 mg/dL\nRecorded plan: repeat lipid panel on the clinician's requested date." },
+  { type: "Medical Report", label: "Thyroid panel", doctor: "Dr. Neha Menon", city: "Bengaluru", date: "2026-07-20", note: "Age: 42\nSex: Female\nTSH: 3.1 mIU/L (reference 0.4–4.0)\nFree T4: 1.2 ng/dL (reference 0.8–1.8)\nRecorded plan: bring this report to the follow-up consultation." },
+  { type: "Medical Report", label: "CT scan report", doctor: "Dr. Vikram Shah", city: "Pune", date: "2026-06-16", note: "Age: 42\nSex: Female\nStudy: CT paranasal sinuses\nObservation: mild mucosal thickening recorded in the sample report.\nRecorded plan: clinician review of imaging; repeat scanning only if separately ordered." },
+  { type: "Medical Report", label: "Renal function panel", doctor: "Dr. Meera Joshi", city: "Mumbai", date: "2026-05-08", note: "Age: 42\nSex: Female\nCreatinine: 0.9 mg/dL\nUrea: 26 mg/dL\nSodium: 139 mmol/L\nPotassium: 4.2 mmol/L\nRecorded plan: routine follow-up with the prescribing clinician." },
+  { type: "Medical Report", label: "Glucose trend", doctor: "Dr. Kavya Nair", city: "Bengaluru", date: "2026-04-13", note: "Age: 42\nSex: Female\nFasting glucose: 109 mg/dL\nHbA1c: 5.8%\nRecorded plan: review the trend against the latest results." },
+  { type: "Prescription", label: "September follow-up", doctor: "Dr. Kavya Nair", city: "Bengaluru", date: "2026-09-29", note: "Age: 42\nSex: Female\nRecorded medicine names: ferrous sulfate; vitamin C.\nStatus: latest synthetic prescription. No dosage or timing is inferred.\nRecorded plan: follow-up visit; compare blood-count records." },
+  { type: "Prescription", label: "August consultation", doctor: "Dr. Arjun Kulkarni", city: "Mysuru", date: "2026-08-12", note: "Age: 42\nSex: Female\nRecorded medicine names: atorvastatin; vitamin D3.\nStatus: historical sample; current use must be confirmed by the clinician.\nRecorded plan: lipid-panel follow-up." },
+  { type: "Prescription", label: "July consultation", doctor: "Dr. Neha Menon", city: "Bengaluru", date: "2026-07-20", note: "Age: 42\nSex: Female\nRecorded medicine names: levothyroxine.\nStatus: historical sample, not an instruction to start or continue medicine.\nRecorded plan: thyroid-panel follow-up." },
+  { type: "Prescription", label: "June ENT visit", doctor: "Dr. Vikram Shah", city: "Pune", date: "2026-06-16", note: "Age: 42\nSex: Female\nRecorded medicine names: cetirizine; saline nasal spray.\nStatus: short-course historical sample; course marked complete.\nRecorded plan: bring CT report to the next ENT visit." },
+  { type: "Prescription", label: "May consultation", doctor: "Dr. Meera Joshi", city: "Mumbai", date: "2026-05-08", note: "Age: 42\nSex: Female\nRecorded medicine names: metformin.\nStatus: historical sample; current use unverified.\nRecorded plan: glucose monitoring and follow-up." },
+  { type: "Prescription", label: "April history", doctor: "Dr. Kavya Nair", city: "Bengaluru", date: "2026-04-13", note: "Age: 42\nSex: Female\nRecorded medicine names: vitamin D3; vitamin C.\nStatus: older sample; superseded by later notes.\nRecorded plan: carry the medicine history to the next appointment." },
+] as const;
+
+export const demoTaskTemplates = [
+  { title: "Order medicines", description: "Demo pharmacy order: verify the latest prescription and stock before ordering. No purchase or dosage recommendation has been made." },
+  { title: "Lab test", description: "Demo lipid-panel slot. Lab name: [to be confirmed]. Confirm instructions directly with the lab." },
+  { title: "Blood test", description: "Demo complete blood count slot. Lab name: [to be confirmed]. No fasting requirement is inferred." },
+  { title: "CT scan appointment", description: "Demo imaging slot. Imaging centre: [to be confirmed]. A clinician's actual order is required." },
+  { title: "Follow-up appointment", description: "Demo consultation with Dr. Kavya Nair, Bengaluru. Clinic confirmation is pending." },
+] as const;

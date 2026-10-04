@@ -1,0 +1,9 @@
+.env*
+!.env.example
+.data
+output
+.next
+node_modules
+*.log
+*.tsbuildinfo
+Agent_Harshita

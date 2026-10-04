@@ -1,5 +1,5 @@
-import { PagePlaceholder } from "@/components/common/PagePlaceholder";
+import { SummaryDashboard } from "@/components/dashboard/SummaryDashboard";
 
 export default function OverviewPage() {
-  return <PagePlaceholder title="Family overview" description="A shared view of each family member’s care and what needs attention." />;
+  return <SummaryDashboard />;
 }

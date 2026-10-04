@@ -1,11 +1,7 @@
-import type { RailAdapter } from "@/lib/rail-types";
-
-/** Placeholder: Gnani voice capabilities will be registered here. */
-export const gnaniRail: RailAdapter = {
-  id: "gnani",
-  displayName: "Gnani",
-  description: "Voice interaction and call coordination.",
-  tools: [],
-};
-
+export { gnaniRail, GnaniError, GnaniSpeechClient } from "./client";
+export { runVoiceDemo } from "./demo";
+export { createLabInquiryPlan, createPharmacyInquiryPlan, parseLabInquiryResult, parsePharmacyInquiryResult } from "./flow";
+export { ScriptedCallTransport } from "./transport";
+export type { CallTransport } from "./transport";
+export { startTwilioTrialCall } from "./twilio";
 export type { VoiceCallRequest, VoiceCallStatus } from "./types";

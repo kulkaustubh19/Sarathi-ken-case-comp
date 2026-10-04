@@ -4,5 +4,9 @@ out/
 *.log
 .env.local
 .env*.local
+.env*
 !.env.example
 *.tsbuildinfo
+.data/
+output/
+.vercel/

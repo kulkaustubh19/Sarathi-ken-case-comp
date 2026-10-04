@@ -9,3 +9,6 @@ export const pineLabsRail: RailAdapter = {
 };
 
 export type { PaymentRequest, PaymentStatus } from "./types";
+
+// Server-only integration; do not import from client components.
+export { startConsent, consentComplete } from "./esign";

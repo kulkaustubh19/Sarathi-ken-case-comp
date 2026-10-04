@@ -1,11 +1,14 @@
 import type { RailAdapter } from "@/lib/rail-types";
 
-/** Placeholder: Delhivery logistics capabilities will be registered here. */
 export const delhiveryRail: RailAdapter = {
   id: "delhivery",
   displayName: "Delhivery",
   description: "Delivery creation, tracking, and status updates.",
-  tools: [],
+  tools: [
+    { id: "delhivery.standardize_care_address", name: "Standardize care address", description: "Standardizes and validates an informal care address." },
+    { id: "delhivery.rank_suitable_labs", name: "Rank suitable labs", description: "Ranks supplied available labs by distance and price." },
+  ],
 };
 
 export type { DeliveryRequest, DeliveryStatus } from "./types";
+export { rankSuitableLabs, standardizeCareAddress } from "./location";

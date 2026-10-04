@@ -1,0 +1,3 @@
+import { updateCallStatus, validateTwilioSignature } from "@/rails/gnani/twilio";
+export const runtime = "nodejs";
+export async function POST(request: Request) { const form = new URLSearchParams(await request.text()); const publicUrl = process.env.PUBLIC_BASE_URL?.replace(/\/$/, ""); const callId = new URL(request.url).searchParams.get("callId"); if (!callId || !validateTwilioSignature(`${publicUrl}/api/twilio/status?callId=${callId}`, form, request.headers.get("x-twilio-signature"))) return new Response("Unauthorized", { status: 401 }); await updateCallStatus(callId, form.get("CallStatus") || "unknown"); return new Response(null, { status: 204 }); }

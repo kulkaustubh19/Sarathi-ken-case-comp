@@ -3,8 +3,8 @@ import { AppShell } from "@/components/layout/AppShell";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Care Circle",
-  description: "Family health coordination prototype",
+  title: "Sarathi",
+  description: "Your family care companion, across generations",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
